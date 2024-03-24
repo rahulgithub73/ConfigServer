@@ -1,0 +1,14 @@
+#https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_quick_start
+server:
+  port: 8888
+spring:
+  application:
+    name: ConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rahulgithub73/config-files.git
+          search-paths:
+            - service-a
+            - service-b
